@@ -1,8 +1,8 @@
-package com.in4mo.task.service;
+package com.demo.task.service;
 
-import com.in4mo.task.model.Registry;
-import com.in4mo.task.model.Transaction;
-import com.in4mo.task.repository.TransferRepository;
+import com.demo.task.model.Registry;
+import com.demo.task.model.Transaction;
+import com.demo.task.repository.TransferRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

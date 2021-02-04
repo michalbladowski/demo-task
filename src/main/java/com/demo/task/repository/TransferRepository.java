@@ -1,6 +1,6 @@
-package com.in4mo.task.repository;
+package com.demo.task.repository;
 
-import com.in4mo.task.model.Transaction;
+import com.demo.task.model.Transaction;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

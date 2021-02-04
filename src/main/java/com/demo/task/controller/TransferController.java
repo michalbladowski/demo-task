@@ -1,7 +1,7 @@
-package com.in4mo.task.controller;
+package com.demo.task.controller;
 
-import com.in4mo.task.model.Transaction;
-import com.in4mo.task.service.TransferService;
+import com.demo.task.model.Transaction;
+import com.demo.task.service.TransferService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

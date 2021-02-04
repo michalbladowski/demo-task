@@ -1,6 +1,6 @@
-package com.in4mo.task.controller;
+package com.demo.task.controller;
 
-import com.in4mo.task.service.RegistryService;
+import com.demo.task.service.RegistryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

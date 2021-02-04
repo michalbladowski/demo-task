@@ -1,6 +1,6 @@
-package com.in4mo.task;
+package com.demo.task;
 
-import com.in4mo.task.service.RegistryService;
+import com.demo.task.service.RegistryService;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;

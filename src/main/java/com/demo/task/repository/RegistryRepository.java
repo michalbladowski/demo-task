@@ -1,6 +1,6 @@
-package com.in4mo.task.repository;
+package com.demo.task.repository;
 
-import com.in4mo.task.model.Registry;
+import com.demo.task.model.Registry;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;

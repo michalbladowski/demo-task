@@ -1,4 +1,4 @@
-package com.in4mo.task.model;
+package com.demo.task.model;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
