@@ -72,6 +72,12 @@ java -jar target/task-0.0.1-SNAPSHOT.jar
 
 Now you can use your favourite HTTP client to test all the endpoints.
 
+Example REST calls:
+```
+PUT http://localhost:8080/registry/1/recharge?amount=300
+POST http://localhost:8080/transfer/from/1/to/2?amount=1500
+GET http://localhost:8080/balance/all
+```
 ### Contact
 ```
 michal.bladowski@gmail.com
