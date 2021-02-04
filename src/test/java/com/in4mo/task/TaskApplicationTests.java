@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
@@ -19,6 +20,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @EnableConfigurationProperties
 @AutoConfigureMockMvc
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+@ActiveProfiles("test")
 public class TaskApplicationTests {
 
 	@Autowired
@@ -113,7 +115,7 @@ public class TaskApplicationTests {
 		mockMvc.perform(get("/transfers"))
 				.andExpect(status().isOk())
 				.andExpect(jsonPath("$", Matchers.hasSize(1)))
-				.andExpect(jsonPath("$[0].id", Matchers.equalTo(0)))
+				.andExpect(jsonPath("$[0].id", Matchers.equalTo(1)))
 				.andExpect(jsonPath("$[0].source", Matchers.equalTo(1)))
 				.andExpect(jsonPath("$[0].destination", Matchers.equalTo(4)))
 				.andExpect(jsonPath("$[0].amount", Matchers.equalTo(1500.0)));
@@ -137,7 +139,7 @@ public class TaskApplicationTests {
 		mockMvc.perform(get("/transfers"))
 				.andExpect(status().isOk())
 				.andExpect(jsonPath("$", Matchers.hasSize(2)))
-				.andExpect(jsonPath("$[1].id", Matchers.equalTo(1)))
+				.andExpect(jsonPath("$[1].id", Matchers.equalTo(2)))
 				.andExpect(jsonPath("$[1].source", Matchers.equalTo(2)))
 				.andExpect(jsonPath("$[1].destination", Matchers.equalTo(3)))
 				.andExpect(jsonPath("$[1].amount", Matchers.equalTo(500.0)));
@@ -161,7 +163,7 @@ public class TaskApplicationTests {
 		mockMvc.perform(get("/transfers"))
 				.andExpect(status().isOk())
 				.andExpect(jsonPath("$", Matchers.hasSize(3)))
-				.andExpect(jsonPath("$[2].id", Matchers.equalTo(2)))
+				.andExpect(jsonPath("$[2].id", Matchers.equalTo(3)))
 				.andExpect(jsonPath("$[2].source", Matchers.equalTo(1)))
 				.andExpect(jsonPath("$[2].destination", Matchers.equalTo(2)))
 				.andExpect(jsonPath("$[2].amount", Matchers.equalTo(1000.0)));
